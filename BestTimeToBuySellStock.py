@@ -33,3 +33,11 @@ print("Testing 1: ", solution.maxProfit(prices)) # expected: 5
 # case 2:
 prices = [7,6,4,3,1]
 print(f"Testing 2: ", solution.maxProfit(prices)) # expected: 0
+
+# case 3:
+prices = [1]
+print(f"Testing 3: ", solution.maxProfit(prices)) # expected: 0
+
+# case 4:
+prices = [2, 10, 11, 4, 3, 120]
+print(f"Testing 5: ", solution.maxProfit(prices)) # expected: 118
