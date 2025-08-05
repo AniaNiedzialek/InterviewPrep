@@ -10,27 +10,20 @@ from typing import List
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
-        buy_price = prices[0]
-        sell_price = 0
         resMax = 0
+        buy = prices[0]
+        sell = 0
         
         for i in range(1, len(prices)):
-            print(f"prices of i is {prices[i]}")
-            # change to the new point since the previous one was too high
-            if prices[i] < buy_price:
-                print(f"hello")
-                buy_price = prices[i]
-                
-            # otherwise, compute the global max
-            else:
-                sell_price = prices[i]
-                
-            if sell_price - buy_price > resMax:
-                resMax = sell_price - buy_price
+            if prices[i] < buy:
+                buy = prices[i]
+
+            else: 
+                sell = prices[i]
+            if sell - buy > resMax:
+                resMax = sell - buy
+        return resMax            
             
-                
-        
-        return resMax
     
 # testing
 solution = Solution()
