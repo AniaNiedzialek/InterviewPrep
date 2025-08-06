@@ -8,12 +8,14 @@
 
 class Solution():
     def reverseWords(self, s: str) -> str:
+        # step 1 - split into separate words
         splitted = s.split()
-        print(splitted)
-        
+
+        # step 2 - reverse the words
         reverse = list(reversed(splitted))
         print(reverse)
         
+        # return 
         return ' '.join(reverse)
 
 
